@@ -2,10 +2,12 @@ import styles from './Menu.module.scss';
 import { ReactComponent as Logo } from 'assets/logo.svg'
 import SearchEngine from './SearchEngine';
 import { useState } from 'react';
+import Filters from './Filters';
 
 export default function Menu() {
     
     const [search, setSearch] = useState('');
+    const [filter, setFilter] = useState<number | null>(null);
     
     return (
         <main>
@@ -22,6 +24,9 @@ export default function Menu() {
                     Menu
                 </h3>
                 <SearchEngine search={search} setSearch={setSearch}/>
+                <div className={styles.menuCard__filters}>
+                    <Filters filter={filter} setFilter={setFilter}/>
+                </div>
             </section>
         </main>
     )
