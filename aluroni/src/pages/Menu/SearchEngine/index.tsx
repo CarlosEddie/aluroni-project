@@ -10,7 +10,7 @@ interface Props {
 export default function SearchEngine({ search, setSearch }: Props) {
     return (
         <div className={styles.searchEngine}>
-            <input value={search} onChange={event => setSearch(event.target.value)} />
+            <input value={search} onChange={event => setSearch(event.target.value)} placeholder="Search"/>
             <CgSearch size={20} color="#4c4d5e" />
         </div>
     )
