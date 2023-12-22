@@ -4,6 +4,7 @@ import SearchEngine from './SearchEngine';
 import { useState } from 'react';
 import Filters from './Filters';
 import Organizer from './Organizer';
+import Items from './Items';
 
 export default function Menu() {
     
@@ -30,6 +31,7 @@ export default function Menu() {
                     <Filters filter={filter} setFilter={setFilter}/>
                     <Organizer organizer={organizer} setOrganizer={setOrganizer} />
                 </div>
+                <Items />
             </section>
         </main>
     )
