@@ -1,33 +1,37 @@
 import logo from 'assets/logo.svg';
 import styles from './Item.module.scss';
+import menu from '../items.json'
 
-export default function Item() {
+type Props = typeof menu[0];
+
+export default function Item(props: Props) {
+    const { title, description, category, size, serving, price } = props;
     return (
         <div className={styles.item}>
             <div className={styles.item__image}>
-                <img src={logo} alt="image" />
+                <img src={logo} alt={title} />
             </div>
             <div className={styles.item__description}>
                 <div className={styles.item__title}>
                     <h2>
-                        Pasta
+                        { title }
                     </h2>
                     <p>
-                        pasta description
+                        { description }
                     </p>
                 </div>
                 <div className={styles.item__tags}>
                     <div className={styles.item__type}>
-                        Pasta
+                        { category.label }
                     </div>
                     <div className={styles.item__portion}>
-                        400g
+                        { size }g
                     </div>
                     <div className={styles.item__qtypeople}>
-                        serves 2 people
+                        Serves { serving } {serving === 1 ? ' person' : ' people'}
                     </div>
                     <div className={styles.item__value}>
-                        R$ 50
+                        ${ price.toFixed(2) }
                     </div>
                 </div>
             </div>
