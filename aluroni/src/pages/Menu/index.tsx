@@ -31,7 +31,7 @@ export default function Menu() {
                     <Filters filter={filter} setFilter={setFilter}/>
                     <Organizer organizer={organizer} setOrganizer={setOrganizer} />
                 </div>
-                <Items />
+                <Items search={search} filter={filter} organizer={organizer} />
             </section>
         </main>
     )
