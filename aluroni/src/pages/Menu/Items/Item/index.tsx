@@ -21,10 +21,10 @@ export default function Item(props: Props) {
                     </p>
                 </div>
                 <div className={styles.item__tags}>
-                    <div className={classNames({
-                        [styles.item__type]: true,
-                        [styles[`item__type__${category.label.toLowerCase()}`]]: true,
-                    })}>
+                    <div className={classNames(
+                        styles.item__type,
+                        styles[`item__type__${category.label.toLowerCase()}`],
+                    )}>
                         { category.label }
                     </div>
                     <div className={styles.item__portion}>
