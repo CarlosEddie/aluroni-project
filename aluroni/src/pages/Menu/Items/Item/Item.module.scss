@@ -71,7 +71,7 @@ $vegans: #80aa40;
     height: 40px;
     justify-content: center;
     padding: 10px 30px;
-    &__massas {
+    &__pasta {
       background-color: $pastas;
       color: white;
     }
@@ -82,7 +82,7 @@ $vegans: #80aa40;
     &__combos {
       background-color: $combos;
     }
-    &__vegans {
+    &__vegan {
       background-color: $vegans;
     }
   }
