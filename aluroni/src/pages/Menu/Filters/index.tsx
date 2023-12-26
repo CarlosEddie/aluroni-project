@@ -18,7 +18,7 @@ export default function Filters({ filter, setFilter }: Props) {
         }
         return (
             setFilter(option.id)
-        )
+        );
     }
     
     return (
@@ -32,5 +32,5 @@ export default function Filters({ filter, setFilter }: Props) {
                 </button>
             ))}
         </div>
-    )
+    );
 }

@@ -1,6 +1,6 @@
-import React from "react"
-import styles from './SearchEngine.module.scss'
-import { CgSearch } from 'react-icons/cg'
+import React from 'react';
+import styles from './SearchEngine.module.scss';
+import { CgSearch } from 'react-icons/cg';
 
 interface Props {
     search: string,
@@ -13,5 +13,5 @@ export default function SearchEngine({ search, setSearch }: Props) {
             <input value={search} onChange={event => setSearch(event.target.value)} placeholder="Search"/>
             <CgSearch size={20} color="#4c4d5e" />
         </div>
-    )
+    );
 }

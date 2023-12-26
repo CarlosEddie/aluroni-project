@@ -16,7 +16,7 @@ export default function Organizer({organizer, setOrganizer}: Props) {
     return (
         <button className={classNames({
             [styles.organizer]: true,
-            [styles['organizer--active']]: organizer !== "",
+            [styles['organizer--active']]: organizer !== '',
         })} onClick={() => setOpen(!open)} onBlur={() => setOpen(false)}>
             <span>{organizerName || 'Order by'}</span>
             {open ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
@@ -31,5 +31,5 @@ export default function Organizer({organizer, setOrganizer}: Props) {
                 ))}
             </div>
         </button>
-    )
+    );
 }

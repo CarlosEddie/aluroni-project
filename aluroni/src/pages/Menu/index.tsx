@@ -1,5 +1,5 @@
 import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg'
+import { ReactComponent as Logo } from 'assets/logo.svg';
 import SearchEngine from './SearchEngine';
 import { useState } from 'react';
 import Filters from './Filters';
@@ -10,7 +10,7 @@ export default function Menu() {
     
     const [search, setSearch] = useState('');
     const [filter, setFilter] = useState<number | null>(null);
-    const [organizer, setOrganizer] = useState("");
+    const [organizer, setOrganizer] = useState('');
     
     return (
         <main>
@@ -34,5 +34,5 @@ export default function Menu() {
                 <Items search={search} filter={filter} organizer={organizer} />
             </section>
         </main>
-    )
+    );
 }
