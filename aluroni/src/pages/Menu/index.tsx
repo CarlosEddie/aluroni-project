@@ -1,5 +1,4 @@
 import styles from './Menu.module.scss';
-import { ReactComponent as Logo } from 'assets/logo.svg';
 import SearchEngine from './SearchEngine';
 import { useState } from 'react';
 import Filters from './Filters';
@@ -14,9 +13,6 @@ export default function Menu() {
     
     return (
         <main>
-            <nav className={styles.menu}>
-                <Logo />
-            </nav>
             <header className={styles.header}>
                 <div className={styles.header__text}>
                     The code and pasta house
