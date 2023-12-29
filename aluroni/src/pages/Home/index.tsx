@@ -1,5 +1,6 @@
 import menu from 'data/menu.json';
 import styles from './Home.module.scss';
+import stylesTheme from 'styles/Theme.module.scss';
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
 
     return (
         <section>
-            <h3 className={styles.title}>
+            <h3 className={stylesTheme.title}>
                 Kitchen recommendations
             </h3>
             <div className={styles.recommended2}>

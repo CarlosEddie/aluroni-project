@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Filters from './Filters';
 import Organizer from './Organizer';
 import Items from './Items';
+import stylesTheme from 'styles/Theme.module.scss';
 
 export default function Menu() {
     
@@ -13,7 +14,7 @@ export default function Menu() {
     
     return (
         <section className={styles.menuCard}>
-            <h3 className={styles.menuCard__title}>
+            <h3 className={stylesTheme.title}>
                 Menu
             </h3>
             <SearchEngine search={search} setSearch={setSearch}/>
