@@ -1,11 +1,9 @@
 import styles from './Item.module.scss';
-import menu from 'data/menu.json';
-import classNames from 'classnames';
+import TagsDish from 'Components/TagsDish';
+import { Dish } from 'Types/Dish';
 
-type Props = typeof menu[0];
-
-export default function Item(props: Props) {
-    const { title, description, category, size, serving, price, photo } = props;
+export default function Item(props: Dish) {
+    const { title, description, photo } = props;
     return (
         <div className={styles.item}>
             <div className={styles.item__image}>
@@ -20,23 +18,7 @@ export default function Item(props: Props) {
                         { description }
                     </p>
                 </div>
-                <div className={styles.item__tags}>
-                    <div className={classNames(
-                        styles.item__type,
-                        styles[`item__type__${category.label.toLowerCase()}`],
-                    )}>
-                        { category.label }
-                    </div>
-                    <div className={styles.item__portion}>
-                        { size }g
-                    </div>
-                    <div className={styles.item__qtypeople}>
-                        Serves { serving } {serving === 1 ? ' person' : ' people'}
-                    </div>
-                    <div className={styles.item__value}>
-                        ${ price.toFixed(2) }
-                    </div>
-                </div>
+                <TagsDish {...props} />
             </div>
         </div>
     );
