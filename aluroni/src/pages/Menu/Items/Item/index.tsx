@@ -1,10 +1,12 @@
 import styles from './Item.module.scss';
 import TagsDish from 'Components/TagsDish';
 import { Dish } from 'Types/Dish';
+import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Item(props: Dish) {
+function Item(props: Dish) {
     const { id, title, description, photo } = props;
+    console.log(title);
     const navigate = useNavigate();
     return (
         <div className={styles.item} onClick={() => navigate(`/dish/${id}`)}>
@@ -25,3 +27,5 @@ export default function Item(props: Dish) {
         </div>
     );
 }
+
+export default memo(Item);
