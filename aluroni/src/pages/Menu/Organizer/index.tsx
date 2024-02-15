@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import styles from './Organizer.module.scss';
 import options from './options.json';
 import classNames from 'classnames';
@@ -9,7 +9,7 @@ interface Props {
     setOrganizer: React.Dispatch<React.SetStateAction<string>>,
 }
 
-export default function Organizer({organizer, setOrganizer}: Props) {
+function Organizer({organizer, setOrganizer}: Props) {
     const [open, setOpen] = useState(false);
     const organizerName = organizer && options.find(option => option.value === organizer)?.name;
 
@@ -33,3 +33,5 @@ export default function Organizer({organizer, setOrganizer}: Props) {
         </button>
     );
 }
+
+export default memo(Organizer);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import filters from './filters.json';
 import styles from './Filters.module.scss';
 import classNames from 'classnames';
@@ -10,7 +10,7 @@ interface Props {
     setFilter: React.Dispatch<React.SetStateAction<number | null>>,
 }
 
-export default function Filters({ filter, setFilter }: Props) {
+function Filters({ filter, setFilter }: Props) {
     
     function selectFilter(option: IOption) {
         if(filter === option.id) {
@@ -34,3 +34,5 @@ export default function Filters({ filter, setFilter }: Props) {
         </div>
     );
 }
+
+export default memo(Filters);
