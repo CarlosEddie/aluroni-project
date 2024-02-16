@@ -19,6 +19,7 @@ function Organizer({organizer, setOrganizer}: Props) {
             [styles['organizer--active']]: organizer !== '',
         })} onClick={() => setOpen(!open)} onBlur={() => setOpen(false)}>
             <span>{organizerName || 'Order by'}</span>
+            {/*<MdKeyboardArrowUp size={20} style={{transform: `rotate(${open ? 0 : 180}deg)`}}/>*/}
             {open ? <MdKeyboardArrowUp size={20} /> : <MdKeyboardArrowDown size={20} />}
             <div className={classNames({
                 [styles.organizer__options]: true,
