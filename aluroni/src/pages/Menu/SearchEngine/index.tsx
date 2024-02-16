@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useMemo } from 'react';
 import styles from './SearchEngine.module.scss';
 import { CgSearch } from 'react-icons/cg';
 
@@ -7,11 +7,14 @@ interface Props {
     setSearch: React.Dispatch<React.SetStateAction<string>>,
 }
 
-export default function SearchEngine({ search, setSearch }: Props) {
+function SearchEngine({ search, setSearch }: Props) {
+    const element = useMemo(() => <CgSearch size={20} color="#4c4d5e" />, []);
     return (
         <div className={styles.searchEngine}>
             <input value={search} onChange={event => setSearch(event.target.value)} placeholder="Search"/>
-            <CgSearch size={20} color="#4c4d5e" />
+            {element}
         </div>
     );
 }
+
+export default memo(SearchEngine);
