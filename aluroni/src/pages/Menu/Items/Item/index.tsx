@@ -1,5 +1,5 @@
 import styles from './Item.module.scss';
-import TagsDish from 'Components/TagsDish';
+import TagsDish from 'components/TagsDish';
 import { Dish } from 'Types/Dish';
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
